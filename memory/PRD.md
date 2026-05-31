@@ -11,33 +11,35 @@ Zahtev korisnika (na srpskom): napraviti landing page na **latinici**, fokusiran
 
 ## User Personas
 1. **Vlasnik vozila u Novom Sadu** — želi brzo pozvati i/ili dobiti uputstvo do perionice.
-2. **Prolaznik sa Google rezultata** — proverava lokaciju i radno vreme.
+2. **Prolaznik sa Google rezultata** — proverava lokaciju, fotografije i radno vreme.
 
-## Core Requirements (Static)
+## Core Requirements
 - Sve napisano latinicom (srpski jezik).
 - Istaknut **broj telefona** (021 6341246) sa `tel:` linkom.
 - Istaknuta **adresa** (Kisačka 54, 21000 Novi Sad).
 - **Google Maps embed** + dugme „Otvori navigaciju".
-- Lista usluga sa Google profila: Auto detailing, Poliranje, Uklanjanje ogrebotina, Usisavanje, Pranje enterijera (+ Zaštita i nega).
+- Lista usluga: Auto detailing, Poliranje, Uklanjanje ogrebotina, Usisavanje, Pranje enterijera, Zaštita i nega.
 - **Radno vreme** (Pon–Pet 08–18, Sub 08–15, Ned ne radi).
 - Ocena 4.3 / 104 recenzije prikazana u hero sekciji.
+- **Galerija** sa stvarnim fotografijama klijenta.
 
-## Implemented (2026-01-31)
-- Sticky navbar sa CTA „Pozovi" dugmetom.
-- Hero sekcija sa display tipografijom (Fraunces + Manrope), pulsirajućim CTA „Pozovi", sekundarnim „Uputstvo do nas", ocenom, adresom i hero slikom sa floating phone card-om.
-- Animirana marquee traka sa uslugama.
-- Sekcija „Usluge" — 6 kartica (Auto detailing, Poliranje, Uklanjanje ogrebotina, Usisavanje, Pranje enterijera, Zaštita i nega) + CTA banner.
-- Sekcija „O nama" sa slikom i listom prednosti.
-- Sekcija „Lokacija" sa embedded Google Maps iframe-om, karticom adrese, plavom karticom telefona i karticom radnog vremena.
-- Veliki CTA banner pred footer („Spremni da Vaš auto ponovo zasija?").
-- Footer sa kontaktima i brzim akcijama.
-- **Mobilni sticky call bar** na dnu (samo na telefonu).
-- Sve interaktivne komponente imaju `data-testid` atribute.
+## Implemented
+### 2026-01-31 — MVP
+- Sticky navbar sa CTA „Pozovi", hero, marquee usluga, kartice usluga, „O nama", lokacija sa Google Maps iframe-om, kartice telefon/radno vreme, CTA banner, footer, mobilni sticky call bar.
+- Tipografija: Manrope + Fraunces (display).
+- `tel:` linkovi (10 instanci → `tel:+381216341246`), Maps linkovi (4 instance), embed iframe.
+
+### 2026-01-31 — Galerija sa pravim fotografijama (update)
+- Zamenjene stock slike Unsplash-a sa pravim fotografijama klijenta:
+  - Hero: noćni pogled na perionicu (Aуtoperionica „Bistar Potok").
+  - „O nama": radnik prilikom mašinskog poliranja crvenog vozila.
+- Dodata nova sekcija **#galerija** (između „O nama" i „Lokacija") sa 4 stvarne fotografije u responsive mozaik gridu (jedna featured + 3 sekundarne). Slike se otvaraju u novom tabu pri kliku.
+- „Galerija" link dodat u glavnu navigaciju.
 
 ## Backlog (P1)
-- Galerija fotografija pre/posle obrade vozila.
-- Sekcija sa stvarnim recenzijama klijenata (carousel).
+- Sekcija sa stvarnim recenzijama klijenata (carousel, povezana sa Google Places API).
 - SEO meta tagovi + Open Graph + JSON-LD LocalBusiness schema.
+- Lightbox modal za galeriju umesto otvaranja u novom tabu.
 
 ## Backlog (P2)
 - WhatsApp / Viber direktni link.
@@ -45,4 +47,4 @@ Zahtev korisnika (na srpskom): napraviti landing page na **latinici**, fokusiran
 - Cenovnik usluga.
 
 ## Enhancement Idea
-- Dodati **Google Reviews snippet** ili integraciju sa stvarnim Google recenzijama — značajno povećava poverenje i konverziju poziva (kao auto perionica, glavni CTA je telefonski poziv — recenzije direktno utiču na odluku da li pozvati).
+- Dodati **Google Reviews snippet** ili integraciju sa stvarnim Google recenzijama — značajno povećava poverenje i konverziju poziva.

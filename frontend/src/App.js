@@ -25,9 +25,32 @@ const MAPS_EMBED =
   "https://www.google.com/maps?q=Bistar%20Potok%20Kisa%C4%8Dka%2054%2C%20Novi%20Sad&output=embed";
 
 const HERO_IMG =
-  "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=80";
+  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/mp5hk8nb_Auto-perionica-Bistar-Potok-Novi-Sad-fb.jpg";
 const ABOUT_IMG =
-  "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=1200&q=80";
+  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/2gg606gq_sl8s.jpg";
+
+const GALLERY = [
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/mp5hk8nb_Auto-perionica-Bistar-Potok-Novi-Sad-fb.jpg",
+    alt: "Auto perionica Bistar Potok — ulaz uveče, osvetljeno",
+    caption: "Naša perionica uveče",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/sxbcy71a_Bistar-Potok-Novi-Sad-2.jpg",
+    alt: "Auto perionica Bistar Potok — pogled sa ulice",
+    caption: "Pogled sa Kisačke ulice",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/2gg606gq_sl8s.jpg",
+    alt: "Mašinsko poliranje crvenog vozila",
+    caption: "Mašinsko poliranje laka",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/j14we5dd_3.jpg",
+    alt: "Vozilo nakon obrade u Bistar Potoku",
+    caption: "Vozilo posle naše obrade",
+  },
+];
 
 const services = [
   {
@@ -113,6 +136,9 @@ const Nav = () => (
       <nav className="hidden md:flex items-center gap-7 text-sm text-slate-600">
         <a href="#usluge" className="hover:text-blue-700 transition-colors">
           Usluge
+        </a>
+        <a href="#galerija" className="hover:text-blue-700 transition-colors">
+          Galerija
         </a>
         <a href="#lokacija" className="hover:text-blue-700 transition-colors">
           Lokacija
@@ -432,6 +458,87 @@ const About = () => (
   </section>
 );
 
+const Gallery = () => (
+  <section
+    id="galerija"
+    className="relative py-20 md:py-28 bg-white"
+    data-testid="gallery-section"
+  >
+    <div className="max-w-7xl mx-auto px-5 md:px-8">
+      <div className="grid md:grid-cols-12 gap-8 items-end mb-12">
+        <div className="md:col-span-7">
+          <div className="text-xs uppercase tracking-[0.2em] text-blue-700 font-semibold">
+            Galerija
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mt-3">
+            Naša perionica i naš rad — uživo.
+          </h2>
+        </div>
+        <div className="md:col-span-5 text-slate-600">
+          Fotografije iz naše perionice u Kisačkoj 54. Tu smo svakog radnog
+          dana — svratite, ili nas prvo pozovite na{" "}
+          <a
+            href={`tel:${PHONE_TEL}`}
+            className="text-blue-700 font-semibold hover:underline"
+          >
+            {PHONE_DISPLAY}
+          </a>
+          .
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-5">
+        {/* Large feature */}
+        <a
+          href={GALLERY[0].src}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-testid="gallery-item-0"
+          className="group relative lg:col-span-7 lg:row-span-2 rounded-2xl overflow-hidden ring-1 ring-slate-100 shadow-[0_24px_60px_-30px_rgba(15,23,42,0.35)]"
+        >
+          <img
+            src={GALLERY[0].src}
+            alt={GALLERY[0].alt}
+            className="w-full h-[300px] sm:h-[420px] lg:h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
+          <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/70 via-black/20 to-transparent text-white">
+            <div className="text-[11px] uppercase tracking-widest opacity-80">
+              Lokacija
+            </div>
+            <div className="font-display text-xl md:text-2xl font-semibold">
+              {GALLERY[0].caption}
+            </div>
+          </div>
+        </a>
+
+        {GALLERY.slice(1).map((g, i) => (
+          <a
+            key={g.src}
+            href={g.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid={`gallery-item-${i + 1}`}
+            className="group relative lg:col-span-5 rounded-2xl overflow-hidden ring-1 ring-slate-100 shadow-[0_18px_40px_-25px_rgba(15,23,42,0.3)]"
+          >
+            <img
+              src={g.src}
+              alt={g.alt}
+              className="w-full h-[220px] sm:h-[260px] lg:h-[228px] object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/65 via-black/10 to-transparent text-white">
+              <div className="font-display text-base md:text-lg font-semibold">
+                {g.caption}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const Location = () => (
   <section
     id="lokacija"
@@ -704,6 +811,7 @@ const Home = () => (
       <Hero />
       <Services />
       <About />
+      <Gallery />
       <Location />
       <CtaBanner />
     </main>
