@@ -174,7 +174,7 @@ const Hero = () => (
       <div className="lg:col-span-7">
         <div className="rise inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 text-blue-700 px-3 py-1.5 text-xs font-semibold">
           <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-          Auto perionica · Novi Sad
+          Preko 20 godina iskustva · Novi Sad
         </div>
 
         <h1 className="rise d1 font-display text-[44px] leading-[1.02] md:text-[68px] md:leading-[1.02] font-semibold tracking-tight mt-5">
