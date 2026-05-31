@@ -172,8 +172,8 @@ const Hero = () => (
 
     <div className="relative max-w-7xl mx-auto px-5 md:px-8 pt-14 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-12 gap-10 items-center">
       <div className="lg:col-span-7">
-        <div className="rise inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 text-blue-700 px-3 py-1.5 text-xs font-semibold">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+        <div className="rise inline-flex items-center gap-2.5 rounded-full bg-blue-600 text-white px-5 py-2.5 text-sm md:text-base font-semibold shadow-[0_12px_30px_-12px_rgba(37,99,235,0.7)]">
+          <ShieldCheck className="w-5 h-5" />
           Preko 20 godina iskustva · Novi Sad
         </div>
 
