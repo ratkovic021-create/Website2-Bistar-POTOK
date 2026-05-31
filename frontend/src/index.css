@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --brand-50: #eff6ff;
+    --brand-100: #dbeafe;
+    --brand-200: #bfdbfe;
+    --brand-500: #3b82f6;
+    --brand-600: #2563eb;
+    --brand-700: #1d4ed8;
+    --brand-900: #1e3a8a;
+    --ink: #0b1220;
+    --ink-soft: #334155;
+    --line: #e5edf7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    background: #ffffff;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+    font-family: "Fraunces", "Manrope", serif;
+    letter-spacing: -0.02em;
+}
+
+::selection {
+    background: var(--brand-600);
+    color: #fff;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222 47% 7%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 7%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 7%;
+        --primary: 221 83% 53%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 214 32% 96%;
+        --secondary-foreground: 222 47% 11%;
+        --muted: 214 32% 96%;
+        --muted-foreground: 215 16% 47%;
+        --accent: 214 95% 93%;
+        --accent-foreground: 221 83% 27%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 215 32% 92%;
+        --input: 215 32% 92%;
+        --ring: 221 83% 53%;
+        --radius: 0.875rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+}
+
+/* Soft grid background */
+.bg-grid {
+    background-image:
+        linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(
+        ellipse at top,
+        rgba(0, 0, 0, 1) 30%,
+        transparent 75%
+    );
+}
+
+.bg-blue-blob {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            60% 50% at 80% 0%,
+            rgba(37, 99, 235, 0.18) 0%,
+            transparent 60%
+        ),
+        radial-gradient(
+            40% 35% at 0% 70%,
+            rgba(59, 130, 246, 0.12) 0%,
+            transparent 60%
+        );
+}
+
+/* Reveal animation */
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.rise {
+    animation: rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.rise.d1 {
+    animation-delay: 0.08s;
+}
+.rise.d2 {
+    animation-delay: 0.16s;
+}
+.rise.d3 {
+    animation-delay: 0.24s;
+}
+.rise.d4 {
+    animation-delay: 0.32s;
+}
+.rise.d5 {
+    animation-delay: 0.4s;
+}
+
+/* CTA pulse ring */
+@keyframes ringPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.45);
+    }
+    70% {
+        box-shadow: 0 0 0 14px rgba(37, 99, 235, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
+}
+.pulse-ring {
+    animation: ringPulse 2.2s ease-out infinite;
+}
+
+/* Marquee */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.marquee-track {
+    animation: marquee 28s linear infinite;
+}
+
+/* Card hover */
+.svc-card {
+    transition:
+        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+.svc-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--brand-200);
+    box-shadow: 0 24px 50px -28px rgba(37, 99, 235, 0.5);
+}
+
+/* Map shimmer */
+.map-frame {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.6) inset,
+        0 30px 60px -30px rgba(15, 23, 42, 0.25);
+}
