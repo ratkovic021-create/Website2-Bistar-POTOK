@@ -91,8 +91,8 @@ const hours = [
   { day: "Sreda", time: "08:00 – 18:00" },
   { day: "Četvrtak", time: "08:00 – 18:00" },
   { day: "Petak", time: "08:00 – 18:00" },
-  { day: "Subota", time: "08:00 – 15:00" },
-  { day: "Nedelja", time: "Ne radimo" },
+  { day: "Subota", time: "08:00 – 18:00" },
+  { day: "Nedelja", time: "08:00 – 18:00" },
 ];
 
 const StarRow = ({ value = 4.3 }) => {
@@ -753,7 +753,7 @@ const Footer = () => (
           </li>
           <li className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-blue-600" />
-            <span>Pon–Pet 08–18 · Sub 08–15</span>
+            <span>Radimo svakog dana 08–18</span>
           </li>
         </ul>
       </div>
