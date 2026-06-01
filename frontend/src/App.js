@@ -27,7 +27,7 @@ const MAPS_EMBED =
 const HERO_IMG =
   "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/gz8kt03n_6fe1f7cf-f201-4e39-a339-5816cfaba273.jpg";
 const ABOUT_IMG =
-  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/mp5hk8nb_Auto-perionica-Bistar-Potok-Novi-Sad-fb.jpg";
+  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/y3lesyey_b4fdc49b-ea83-4bb5-addc-c4a54aa1ecf4.jpg";
 
 const HERO_COLLAGE = [
   {
@@ -331,7 +331,7 @@ const About = () => (
           <div className="absolute -inset-3 bg-blue-200/40 rounded-[1.75rem] blur-2xl" />
           <img
             src={ABOUT_IMG}
-            alt="Detailing vozila u Bistar Potoku"
+            alt="Sjajan Mercedes nakon pranja u Bistar Potoku — rezultat govori sam za sebe"
             className="relative rounded-[1.5rem] w-full h-[440px] object-cover ring-1 ring-blue-100"
             loading="lazy"
             data-testid="about-image"
