@@ -318,71 +318,49 @@ const Hero = () => (
 const Services = () => (
   <section
     id="usluge"
-    className="relative py-20 md:py-28"
+    className="relative py-24 md:py-36 overflow-hidden"
     data-testid="services-section"
   >
-    <div className="max-w-7xl mx-auto px-5 md:px-8">
-      <div className="grid md:grid-cols-12 gap-8 items-end mb-12">
-        <div className="md:col-span-7">
-          <div className="text-xs uppercase tracking-[0.2em] text-blue-700 font-semibold">
-            Naše usluge
-          </div>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mt-3">
-            Sve što Vaš auto treba —{" "}
-            <span className="text-blue-700">na jednom mestu.</span>
-          </h2>
-        </div>
-        <div className="md:col-span-5 text-slate-600">
-          Posvećenost detaljima, kvalitetni proizvodi i tim koji voli ono što
-          radi. Bilo da je u pitanju brzo pranje ili kompletan detailing —
-          obavićemo posao kako treba.
-        </div>
+    {/* Decorative background */}
+    <div className="absolute inset-0 bg-grid opacity-60" aria-hidden />
+    <div
+      className="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[720px] rounded-full bg-blue-100/40 blur-3xl"
+      aria-hidden
+    />
+
+    <div className="relative max-w-5xl mx-auto px-5 md:px-8 text-center">
+      <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white text-blue-700 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em]">
+        <Droplets className="w-3.5 h-3.5" />
+        Naša filozofija
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {services.map((s, idx) => (
-          <article
-            key={s.title}
-            data-testid={`service-card-${idx}`}
-            className="svc-card group relative rounded-2xl border border-slate-200 bg-white p-7"
-          >
-            <div className="absolute top-7 right-7 text-slate-300 group-hover:text-blue-600 transition-colors">
-              <ArrowRight className="w-5 h-5" />
-            </div>
-            <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-              <s.icon className="w-6 h-6" />
-            </div>
-            <h3 className="font-display text-xl font-semibold tracking-tight">
-              {s.title}
-            </h3>
-            <p className="mt-2 text-slate-600 text-[15px] leading-relaxed">
-              {s.desc}
-            </p>
-          </article>
-        ))}
-      </div>
+      <blockquote className="mt-10 font-display text-4xl sm:text-5xl md:text-7xl leading-[1.04] font-semibold tracking-tight text-slate-900">
+        <span className="text-blue-700">Higijena</span> Vašeg automobila je{" "}
+        <span className="relative inline-block">
+          <span className="relative z-10">zdravlje</span>
+          <span className="absolute left-0 right-0 bottom-2 h-4 md:h-5 bg-blue-200/70 -z-0 rounded-sm" />
+        </span>{" "}
+        za Vas i Vaš auto.
+      </blockquote>
 
-      <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 rounded-2xl border border-blue-100 bg-blue-50/60 p-6 md:p-7">
-        <div className="flex items-start gap-4">
-          <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0">
-            <Phone className="w-6 h-6" />
-          </div>
-          <div>
-            <div className="font-display text-xl font-semibold tracking-tight">
-              Niste sigurni šta Vam treba?
-            </div>
-            <div className="text-slate-600 text-sm mt-0.5">
-              Pozovite nas — preporučićemo najbolju opciju za Vaše vozilo.
-            </div>
-          </div>
-        </div>
+      <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
         <a
           href={`tel:${PHONE_TEL}`}
           data-testid="services-call-button"
-          className="inline-flex items-center gap-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 transition-colors"
+          className="pulse-ring inline-flex items-center gap-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-4 text-base shadow-[0_18px_40px_-18px_rgba(37,99,235,0.8)] transition-colors"
         >
-          <Phone className="w-4 h-4" />
-          {PHONE_DISPLAY}
+          <Phone className="w-5 h-5" />
+          Pozovi {PHONE_DISPLAY}
+        </a>
+        <a
+          href={MAPS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-testid="services-directions-button"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-slate-200 hover:border-blue-600 hover:text-blue-700 text-slate-800 font-semibold px-6 py-[14px] text-base transition-colors"
+        >
+          <Navigation className="w-5 h-5" />
+          Uputstvo do nas
         </a>
       </div>
     </div>
