@@ -18,11 +18,11 @@ import {
 
 const PHONE_DISPLAY = "021 6341246";
 const PHONE_TEL = "+381216341246";
-const ADDRESS = "Kisačka 54, 21000 Novi Sad";
+const ADDRESS = "Jovana Cvijića 54, 21000 Novi Sad";
 const MAPS_URL =
-  "https://www.google.com/maps/dir/?api=1&destination=Bistar+Potok+Kisa%C4%8Dka+54+Novi+Sad";
+  "https://www.google.com/maps/dir/?api=1&destination=Bistar+Potok+Jovana+Cvij%C4%87a+54+Novi+Sad";
 const MAPS_EMBED =
-  "https://www.google.com/maps?q=Bistar%20Potok%20Kisa%C4%8Dka%2054%2C%20Novi%20Sad&output=embed";
+  "https://www.google.com/maps?q=Bistar%20Potok%20Jovana%20Cvij%C4%87a%2054%2C%20Novi%20Sad&output=embed";
 
 const HERO_IMG =
   "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/mp5hk8nb_Auto-perionica-Bistar-Potok-Novi-Sad-fb.jpg";
@@ -38,7 +38,7 @@ const GALLERY = [
   {
     src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/sxbcy71a_Bistar-Potok-Novi-Sad-2.jpg",
     alt: "Auto perionica Bistar Potok — pogled sa ulice",
-    caption: "Pogled sa Kisačke ulice",
+    caption: "Pogled sa ulice",
   },
   {
     src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/2gg606gq_sl8s.jpg",
@@ -177,15 +177,19 @@ const Hero = () => (
           Preko 20 godina iskustva · Novi Sad
         </div>
 
-        <h1 className="rise d1 font-display text-[44px] leading-[1.02] md:text-[68px] md:leading-[1.02] font-semibold tracking-tight mt-5">
-          Sjaj kao{" "}
+        <h1 className="rise d1 font-display text-[36px] leading-[1.08] md:text-[54px] md:leading-[1.05] font-semibold tracking-tight mt-5">
+          U ulici{" "}
           <span className="relative inline-block">
-            <span className="relative z-10 text-blue-700">prvog dana</span>
+            <span className="relative z-10 text-blue-700">Jovana Cvijića</span>
             <span className="absolute left-0 right-0 bottom-1 h-3 bg-blue-200/70 -z-0 rounded-sm" />
-          </span>
-          <br />
-          za Vaš automobil.
+          </span>{" "}
+          ima jedna mala auto perionica, zove se{" "}
+          <span className="text-blue-700">Bistar Potok</span>.
         </h1>
+
+        <p className="rise d2 mt-5 font-display text-2xl md:text-3xl text-slate-800 italic">
+          Mala perionica. Dobro društvo.
+        </p>
 
         <p className="rise d2 mt-6 max-w-xl text-[17px] md:text-lg text-slate-600 leading-relaxed">
           Bistar Potok — auto perionica i detailing studio u Novom Sadu.
@@ -475,8 +479,8 @@ const Gallery = () => (
           </h2>
         </div>
         <div className="md:col-span-5 text-slate-600">
-          Fotografije iz naše perionice u Kisačkoj 54. Tu smo svakog radnog
-          dana — svratite, ili nas prvo pozovite na{" "}
+          Fotografije iz naše perionice u Jovana Cvijića 54. Tu smo svakog
+          radnog dana — svratite, ili nas prvo pozovite na{" "}
           <a
             href={`tel:${PHONE_TEL}`}
             className="text-blue-700 font-semibold hover:underline"
@@ -554,8 +558,8 @@ const Location = () => (
           Lako do nas — usred Novog Sada.
         </h2>
         <p className="mt-4 text-slate-600 text-[17px]">
-          Nalazimo se u Kisačkoj 54. Otvorite navigaciju jednim klikom ili nas
-          pozovite ako Vam treba pomoć oko prilaza.
+          Nalazimo se u ulici Jovana Cvijića 54. Otvorite navigaciju jednim
+          klikom ili nas pozovite ako Vam treba pomoć oko prilaza.
         </p>
       </div>
 
@@ -587,7 +591,7 @@ const Location = () => (
                   Adresa
                 </div>
                 <div className="font-display font-semibold text-lg">
-                  Kisačka 54
+                  Jovana Cvijića 54
                 </div>
               </div>
             </div>
