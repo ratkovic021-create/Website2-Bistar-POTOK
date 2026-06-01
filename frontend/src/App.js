@@ -25,63 +25,43 @@ const MAPS_EMBED =
   "https://www.google.com/maps?q=Bistar%20Potok%20Jovana%20Cvij%C4%87a%2054%2C%20Novi%20Sad&output=embed";
 
 const HERO_IMG =
-  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/0zwzl6g3_image_2026-06-01_035127144.png";
+  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/gz8kt03n_6fe1f7cf-f201-4e39-a339-5816cfaba273.jpg";
 const ABOUT_IMG =
-  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/2gg606gq_sl8s.jpg";
+  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/mp5hk8nb_Auto-perionica-Bistar-Potok-Novi-Sad-fb.jpg";
 
 const HERO_COLLAGE = [
   {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/0zwzl6g3_image_2026-06-01_035127144.png",
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/gz8kt03n_6fe1f7cf-f201-4e39-a339-5816cfaba273.jpg",
     alt: "Aуtoperionica Bistar Potok — pogled na ulaz",
     caption: "Naša perionica",
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/s4wba6l6_e3767dc9-0688-4e37-b4a7-7f9236ce957a.jpg",
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/09i6gzql_9701449b-2717-4ce5-926c-875737f92318.jpg",
+    alt: "Žuti zid sa stripom uz perionicu",
+    caption: "Strip mural",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/4aunoqt6_e3767dc9-0688-4e37-b4a7-7f9236ce957a.jpg",
     alt: "Udoban kutak za čekanje sa kafe aparatom",
-    caption: "Mesto za kafu dok čekate",
-  },
-  {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/fkyougof_9701449b-2717-4ce5-926c-875737f92318.jpg",
-    alt: "Žuti zid sa stripom",
-    caption: "Naš strip kutak",
-  },
-  {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/2gg606gq_sl8s.jpg",
-    alt: "Mašinsko poliranje vozila",
-    caption: "Poliranje na delu",
+    caption: "Kutak za kafu",
   },
 ];
 
 const GALLERY = [
   {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/0zwzl6g3_image_2026-06-01_035127144.png",
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/gz8kt03n_6fe1f7cf-f201-4e39-a339-5816cfaba273.jpg",
     alt: "Aуtoperionica Bistar Potok — glavni ulaz",
     caption: "Glavni ulaz perionice",
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/wqot810f_6fe1f7cf-f201-4e39-a339-5816cfaba273.jpg",
-    alt: "Aуtoperionica Bistar Potok — boks 2",
-    caption: "Brzi i ekspres pranje",
-  },
-  {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/fkyougof_9701449b-2717-4ce5-926c-875737f92318.jpg",
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/09i6gzql_9701449b-2717-4ce5-926c-875737f92318.jpg",
     alt: "Žuti zid sa stripom uz perionicu",
     caption: "Strip mural — naš znak prepoznavanja",
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/s4wba6l6_e3767dc9-0688-4e37-b4a7-7f9236ce957a.jpg",
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/4aunoqt6_e3767dc9-0688-4e37-b4a7-7f9236ce957a.jpg",
     alt: "Sala za čekanje sa kafe aparatom i slikama",
     caption: "Naš kutak za odmor uz kafu",
-  },
-  {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/mp5hk8nb_Auto-perionica-Bistar-Potok-Novi-Sad-fb.jpg",
-    alt: "Auto perionica Bistar Potok uveče",
-    caption: "Perionica uveče",
-  },
-  {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/2gg606gq_sl8s.jpg",
-    alt: "Mašinsko poliranje crvenog vozila",
-    caption: "Mašinsko poliranje laka",
   },
 ];
 
@@ -170,9 +150,6 @@ const Nav = () => (
         <a href="#usluge" className="hover:text-blue-700 transition-colors">
           Usluge
         </a>
-        <a href="#galerija" className="hover:text-blue-700 transition-colors">
-          Galerija
-        </a>
         <a href="#lokacija" className="hover:text-blue-700 transition-colors">
           Lokacija
         </a>
@@ -203,153 +180,92 @@ const Hero = () => (
     <div className="absolute inset-0 bg-grid" aria-hidden />
     <div className="bg-blue-blob" aria-hidden />
 
-    <div className="relative max-w-7xl mx-auto px-5 md:px-8 pt-14 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-12 gap-10 items-center">
-      <div className="lg:col-span-7">
-        <div className="rise inline-flex items-center gap-2.5 rounded-full bg-blue-600 text-white px-5 py-2.5 text-sm md:text-base font-semibold shadow-[0_12px_30px_-12px_rgba(37,99,235,0.7)]">
-          <ShieldCheck className="w-5 h-5" />
-          Preko 20 godina iskustva · Novi Sad
-        </div>
-
-        <h1 className="rise d1 font-display text-[36px] leading-[1.08] md:text-[54px] md:leading-[1.05] font-semibold tracking-tight mt-5">
-          U ulici{" "}
-          <span className="relative inline-block">
-            <span className="relative z-10 text-blue-700">Jovana Cvijića</span>
-            <span className="absolute left-0 right-0 bottom-1 h-3 bg-blue-200/70 -z-0 rounded-sm" />
-          </span>{" "}
-          ima jedna mala auto perionica, zove se{" "}
-          <span className="text-blue-700">Bistar Potok</span>.
-        </h1>
-
-        <p className="rise d2 mt-5 font-display text-2xl md:text-3xl text-slate-800 italic">
-          Mala perionica. Dobro društvo.
-        </p>
-
-        <p className="rise d2 mt-6 max-w-xl text-[17px] md:text-lg text-slate-600 leading-relaxed">
-          Bistar Potok — auto perionica i detailing studio u Novom Sadu.
-          Pranje, poliranje, uklanjanje ogrebotina i temeljna nega
-          enterijera. Bez gužve, bez čekanja — samo pozovite i dođite.
-        </p>
-
-        <div className="rise d3 mt-8 flex flex-wrap items-center gap-3">
-          <a
-            href={`tel:${PHONE_TEL}`}
-            data-testid="hero-call-button"
-            className="pulse-ring inline-flex items-center gap-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-4 text-base shadow-[0_18px_40px_-18px_rgba(37,99,235,0.8)] transition-colors"
-          >
-            <Phone className="w-5 h-5" />
-            Pozovi {PHONE_DISPLAY}
-          </a>
-          <a
-            href={MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="hero-directions-button"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-slate-200 hover:border-blue-600 hover:text-blue-700 text-slate-800 font-semibold px-6 py-[14px] text-base transition-colors"
-          >
-            <Navigation className="w-5 h-5" />
-            Uputstvo do nas
-          </a>
-        </div>
-
-        <div className="rise d4 mt-9 flex flex-wrap items-center gap-x-7 gap-y-3">
-          <div className="flex items-center gap-2.5">
-            <div className="flex items-baseline gap-1">
-              <span className="font-display text-2xl font-semibold">4.3</span>
-              <span className="text-slate-400 text-sm">/5</span>
-            </div>
-            <StarRow value={4.3} />
-            <span className="text-sm text-slate-500">(104 ocene)</span>
-          </div>
-          <div className="hidden sm:block w-px h-6 bg-slate-200" />
-          <div className="flex items-center gap-2 text-sm text-slate-600">
-            <MapPin className="w-4 h-4 text-blue-600" />
-            {ADDRESS}
-          </div>
-        </div>
+    <div className="relative max-w-7xl mx-auto px-5 md:px-8 pt-14 md:pt-16 pb-10 md:pb-14 text-center">
+      <div className="rise inline-flex items-center gap-2.5 rounded-full bg-blue-600 text-white px-5 py-2.5 text-sm md:text-base font-semibold shadow-[0_12px_30px_-12px_rgba(37,99,235,0.7)]">
+        <ShieldCheck className="w-5 h-5" />
+        Preko 20 godina iskustva · Novi Sad
       </div>
 
-      <div className="lg:col-span-5">
-        <div className="rise d2 relative">
-          <div className="absolute -inset-4 bg-gradient-to-br from-blue-200/60 to-sky-100/40 rounded-[2rem] blur-2xl" />
-          <div
-            className="relative grid grid-cols-2 grid-rows-2 gap-2.5 rounded-[1.75rem] p-2.5 bg-white ring-1 ring-blue-100 shadow-[0_40px_80px_-40px_rgba(15,23,42,0.35)]"
-            data-testid="hero-collage"
-          >
-            {HERO_COLLAGE.map((g, i) => (
-              <a
-                key={g.src}
-                href={g.src}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid={`hero-collage-${i}`}
-                className="group relative rounded-[1.1rem] overflow-hidden"
-              >
-                <img
-                  src={g.src}
-                  alt={g.alt}
-                  className="w-full h-[210px] object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading={i === 0 ? "eager" : "lazy"}
-                />
-                <div className="absolute inset-x-0 bottom-0 px-3 py-2 bg-gradient-to-t from-black/70 via-black/15 to-transparent text-white">
-                  <div className="font-display text-[13px] font-semibold leading-tight drop-shadow">
-                    {g.caption}
-                  </div>
-                </div>
-              </a>
-            ))}
-            {/* Center pill on top of collage */}
-            <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:flex items-center gap-1.5 rounded-full bg-white/95 backdrop-blur px-3 py-1.5 text-[11px] font-semibold text-blue-700 ring-1 ring-blue-100 shadow-md">
-              <Check className="w-3.5 h-3.5" />
-              Bistar Potok · Novi Sad
-            </div>
-          </div>
+      <h1 className="rise d1 font-display text-[36px] leading-[1.08] md:text-[58px] md:leading-[1.05] font-semibold tracking-tight mt-6 max-w-5xl mx-auto">
+        U ulici{" "}
+        <span className="relative inline-block">
+          <span className="relative z-10 text-blue-700">Jovana Cvijića</span>
+          <span className="absolute left-0 right-0 bottom-1 h-3 bg-blue-200/70 -z-0 rounded-sm" />
+        </span>{" "}
+        ima jedna mala auto perionica, zove se{" "}
+        <span className="text-blue-700">Bistar Potok</span>.
+      </h1>
 
-          {/* Floating phone card */}
-          <a
-            href={`tel:${PHONE_TEL}`}
-            data-testid="hero-floating-phone"
-            className="hidden md:flex absolute -left-6 -bottom-6 items-center gap-3 bg-white rounded-2xl pl-4 pr-5 py-3.5 shadow-[0_20px_50px_-20px_rgba(15,23,42,0.35)] ring-1 ring-slate-100 hover:ring-blue-200 transition"
-          >
-            <span className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center">
-              <Phone className="w-5 h-5" />
-            </span>
-            <div className="leading-tight">
-              <div className="text-[11px] uppercase tracking-widest text-slate-500">
-                Zovi sad
-              </div>
-              <div className="font-display font-semibold text-lg">
-                {PHONE_DISPLAY}
-              </div>
-            </div>
-          </a>
+      <p className="rise d2 mt-5 font-display text-2xl md:text-3xl text-slate-800 italic">
+        Mala perionica. Dobro društvo.
+      </p>
+
+      <div className="rise d3 mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href={`tel:${PHONE_TEL}`}
+          data-testid="hero-call-button"
+          className="pulse-ring inline-flex items-center gap-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-4 text-base shadow-[0_18px_40px_-18px_rgba(37,99,235,0.8)] transition-colors"
+        >
+          <Phone className="w-5 h-5" />
+          Pozovi {PHONE_DISPLAY}
+        </a>
+        <a
+          href={MAPS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-testid="hero-directions-button"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-slate-200 hover:border-blue-600 hover:text-blue-700 text-slate-800 font-semibold px-6 py-[14px] text-base transition-colors"
+        >
+          <Navigation className="w-5 h-5" />
+          Uputstvo do nas
+        </a>
+      </div>
+
+      <div className="rise d4 mt-7 flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
+        <div className="flex items-center gap-2.5">
+          <div className="flex items-baseline gap-1">
+            <span className="font-display text-2xl font-semibold">4.3</span>
+            <span className="text-slate-400 text-sm">/5</span>
+          </div>
+          <StarRow value={4.3} />
+          <span className="text-sm text-slate-500">(104 ocene)</span>
+        </div>
+        <div className="hidden sm:block w-px h-6 bg-slate-200" />
+        <div className="flex items-center gap-2 text-sm text-slate-600">
+          <MapPin className="w-4 h-4 text-blue-600" />
+          {ADDRESS}
         </div>
       </div>
     </div>
 
-    {/* Marquee strip */}
-    <div className="relative border-y border-slate-100 bg-white/70">
-      <div className="overflow-hidden">
-        <div className="marquee-track flex gap-12 whitespace-nowrap py-4 text-sm font-medium text-slate-500">
-          {Array.from({ length: 2 }).flatMap((_, k) =>
-            [
-              "Pranje vozila",
-              "Auto detailing",
-              "Poliranje laka",
-              "Uklanjanje ogrebotina",
-              "Usisavanje enterijera",
-              "Nega kože i tapacirunga",
-              "Zaštitni premazi",
-            ].map((t, i) => (
-              <span
-                key={`${k}-${i}`}
-                className="inline-flex items-center gap-3"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-                {t}
-              </span>
-            ))
-          )}
-        </div>
+    {/* BIG 3-image showcase — odmah vidno pri otvaranju */}
+    <div
+      className="relative max-w-[1500px] mx-auto px-5 md:px-8 pb-16 md:pb-20"
+      data-testid="hero-collage"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+        {HERO_COLLAGE.map((g, i) => (
+          <a
+            key={g.src}
+            href={g.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid={`hero-collage-${i}`}
+            className={`rise d${i + 2} group relative rounded-[1.5rem] overflow-hidden ring-1 ring-blue-100 shadow-[0_30px_70px_-30px_rgba(15,23,42,0.4)] bg-white`}
+          >
+            <img
+              src={g.src}
+              alt={g.alt}
+              className="w-full h-[320px] sm:h-[420px] md:h-[460px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+              loading={i === 0 ? "eager" : "lazy"}
+            />
+            <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/70 via-black/15 to-transparent text-white">
+              <div className="font-display text-xl md:text-2xl font-semibold leading-tight drop-shadow">
+                {g.caption}
+              </div>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   </section>
@@ -858,7 +774,6 @@ const Home = () => (
       <Hero />
       <Services />
       <About />
-      <Gallery />
       <Location />
       <CtaBanner />
     </main>
