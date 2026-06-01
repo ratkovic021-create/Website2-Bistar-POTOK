@@ -25,30 +25,63 @@ const MAPS_EMBED =
   "https://www.google.com/maps?q=Bistar%20Potok%20Jovana%20Cvij%C4%87a%2054%2C%20Novi%20Sad&output=embed";
 
 const HERO_IMG =
-  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/mp5hk8nb_Auto-perionica-Bistar-Potok-Novi-Sad-fb.jpg";
+  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/0zwzl6g3_image_2026-06-01_035127144.png";
 const ABOUT_IMG =
   "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/2gg606gq_sl8s.jpg";
 
-const GALLERY = [
+const HERO_COLLAGE = [
   {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/mp5hk8nb_Auto-perionica-Bistar-Potok-Novi-Sad-fb.jpg",
-    alt: "Auto perionica Bistar Potok — ulaz uveče, osvetljeno",
-    caption: "Naša perionica uveče",
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/0zwzl6g3_image_2026-06-01_035127144.png",
+    alt: "Aуtoperionica Bistar Potok — pogled na ulaz",
+    caption: "Naša perionica",
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/sxbcy71a_Bistar-Potok-Novi-Sad-2.jpg",
-    alt: "Auto perionica Bistar Potok — pogled sa ulice",
-    caption: "Pogled sa ulice",
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/s4wba6l6_e3767dc9-0688-4e37-b4a7-7f9236ce957a.jpg",
+    alt: "Udoban kutak za čekanje sa kafe aparatom",
+    caption: "Mesto za kafu dok čekate",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/fkyougof_9701449b-2717-4ce5-926c-875737f92318.jpg",
+    alt: "Žuti zid sa stripom",
+    caption: "Naš strip kutak",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/2gg606gq_sl8s.jpg",
+    alt: "Mašinsko poliranje vozila",
+    caption: "Poliranje na delu",
+  },
+];
+
+const GALLERY = [
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/0zwzl6g3_image_2026-06-01_035127144.png",
+    alt: "Aуtoperionica Bistar Potok — glavni ulaz",
+    caption: "Glavni ulaz perionice",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/wqot810f_6fe1f7cf-f201-4e39-a339-5816cfaba273.jpg",
+    alt: "Aуtoperionica Bistar Potok — boks 2",
+    caption: "Brzi i ekspres pranje",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/fkyougof_9701449b-2717-4ce5-926c-875737f92318.jpg",
+    alt: "Žuti zid sa stripom uz perionicu",
+    caption: "Strip mural — naš znak prepoznavanja",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/s4wba6l6_e3767dc9-0688-4e37-b4a7-7f9236ce957a.jpg",
+    alt: "Sala za čekanje sa kafe aparatom i slikama",
+    caption: "Naš kutak za odmor uz kafu",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/mp5hk8nb_Auto-perionica-Bistar-Potok-Novi-Sad-fb.jpg",
+    alt: "Auto perionica Bistar Potok uveče",
+    caption: "Perionica uveče",
   },
   {
     src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/2gg606gq_sl8s.jpg",
     alt: "Mašinsko poliranje crvenog vozila",
     caption: "Mašinsko poliranje laka",
-  },
-  {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/j14we5dd_3.jpg",
-    alt: "Vozilo nakon obrade u Bistar Potoku",
-    caption: "Vozilo posle naše obrade",
   },
 ];
 
@@ -238,29 +271,36 @@ const Hero = () => (
       <div className="lg:col-span-5">
         <div className="rise d2 relative">
           <div className="absolute -inset-4 bg-gradient-to-br from-blue-200/60 to-sky-100/40 rounded-[2rem] blur-2xl" />
-          <div className="relative rounded-[1.75rem] overflow-hidden ring-1 ring-blue-100 shadow-[0_40px_80px_-40px_rgba(15,23,42,0.35)]">
-            <img
-              src={HERO_IMG}
-              alt="Sjajan, opran automobil"
-              className="w-full h-[440px] object-cover"
-              loading="eager"
-              data-testid="hero-image"
-            />
-            <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/55 via-black/10 to-transparent text-white">
-              <div className="flex items-end justify-between gap-3">
-                <div>
-                  <div className="text-xs uppercase tracking-widest opacity-80">
-                    Detailing studio
-                  </div>
-                  <div className="font-display text-2xl font-semibold">
-                    Profesionalni rezultati
+          <div
+            className="relative grid grid-cols-2 grid-rows-2 gap-2.5 rounded-[1.75rem] p-2.5 bg-white ring-1 ring-blue-100 shadow-[0_40px_80px_-40px_rgba(15,23,42,0.35)]"
+            data-testid="hero-collage"
+          >
+            {HERO_COLLAGE.map((g, i) => (
+              <a
+                key={g.src}
+                href={g.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid={`hero-collage-${i}`}
+                className="group relative rounded-[1.1rem] overflow-hidden"
+              >
+                <img
+                  src={g.src}
+                  alt={g.alt}
+                  className="w-full h-[210px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading={i === 0 ? "eager" : "lazy"}
+                />
+                <div className="absolute inset-x-0 bottom-0 px-3 py-2 bg-gradient-to-t from-black/70 via-black/15 to-transparent text-white">
+                  <div className="font-display text-[13px] font-semibold leading-tight drop-shadow">
+                    {g.caption}
                   </div>
                 </div>
-                <div className="inline-flex items-center gap-1 rounded-full bg-white text-blue-700 px-3 py-1.5 text-xs font-semibold">
-                  <Check className="w-3.5 h-3.5" />
-                  Iskusan tim
-                </div>
-              </div>
+              </a>
+            ))}
+            {/* Center pill on top of collage */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden sm:flex items-center gap-1.5 rounded-full bg-white/95 backdrop-blur px-3 py-1.5 text-[11px] font-semibold text-blue-700 ring-1 ring-blue-100 shadow-md">
+              <Check className="w-3.5 h-3.5" />
+              Bistar Potok · Novi Sad
             </div>
           </div>
 
@@ -470,7 +510,7 @@ const Gallery = () => (
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-5">
-        {/* Large feature */}
+        {/* Large feature (1) — col 1-7, 2 rows */}
         <a
           href={GALLERY[0].src}
           target="_blank"
@@ -481,7 +521,7 @@ const Gallery = () => (
           <img
             src={GALLERY[0].src}
             alt={GALLERY[0].alt}
-            className="w-full h-[300px] sm:h-[420px] lg:h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-[300px] sm:h-[420px] lg:h-[490px] object-cover transition-transform duration-700 group-hover:scale-105"
             loading="lazy"
           />
           <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/70 via-black/20 to-transparent text-white">
@@ -494,7 +534,8 @@ const Gallery = () => (
           </div>
         </a>
 
-        {GALLERY.slice(1).map((g, i) => (
+        {/* Two small items next to feature — col 8-12 (col-span-5 each) */}
+        {GALLERY.slice(1, 3).map((g, i) => (
           <a
             key={g.src}
             href={g.src}
@@ -506,7 +547,31 @@ const Gallery = () => (
             <img
               src={g.src}
               alt={g.alt}
-              className="w-full h-[220px] sm:h-[260px] lg:h-[228px] object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-[220px] sm:h-[260px] lg:h-[235px] object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/65 via-black/10 to-transparent text-white">
+              <div className="font-display text-base md:text-lg font-semibold">
+                {g.caption}
+              </div>
+            </div>
+          </a>
+        ))}
+
+        {/* Bottom row — 3 items, col-span-4 each */}
+        {GALLERY.slice(3).map((g, i) => (
+          <a
+            key={g.src}
+            href={g.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid={`gallery-item-${i + 3}`}
+            className="group relative lg:col-span-4 rounded-2xl overflow-hidden ring-1 ring-slate-100 shadow-[0_18px_40px_-25px_rgba(15,23,42,0.3)]"
+          >
+            <img
+              src={g.src}
+              alt={g.alt}
+              className="w-full h-[220px] sm:h-[240px] lg:h-[240px] object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
             />
             <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/65 via-black/10 to-transparent text-white">
