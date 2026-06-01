@@ -16,8 +16,8 @@ import {
   Check,
 } from "lucide-react";
 
-const PHONE_DISPLAY = "021 6341246";
-const PHONE_TEL = "+381216341246";
+const PHONE_DISPLAY = "063 567 119";
+const PHONE_TEL = "+38163567119";
 const ADDRESS = "Jovana Cvijića 54, 21000 Novi Sad";
 const MAPS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Bistar+Potok+Jovana+Cvij%C4%87a+54+Novi+Sad";
@@ -86,13 +86,13 @@ const services = [
 ];
 
 const hours = [
-  { day: "Ponedeljak", time: "08:00 – 18:00" },
-  { day: "Utorak", time: "08:00 – 18:00" },
-  { day: "Sreda", time: "08:00 – 18:00" },
-  { day: "Četvrtak", time: "08:00 – 18:00" },
-  { day: "Petak", time: "08:00 – 18:00" },
-  { day: "Subota", time: "08:00 – 18:00" },
-  { day: "Nedelja", time: "08:00 – 18:00" },
+  { day: "Ponedeljak", time: "08:00 – 17:00" },
+  { day: "Utorak", time: "08:00 – 17:00" },
+  { day: "Sreda", time: "08:00 – 17:00" },
+  { day: "Četvrtak", time: "08:00 – 17:00" },
+  { day: "Petak", time: "08:00 – 17:00" },
+  { day: "Subota", time: "08:00 – 17:00" },
+  { day: "Nedelja", time: "Ne radimo" },
 ];
 
 const StarRow = ({ value = 4.3 }) => {
@@ -757,7 +757,7 @@ const Footer = () => (
           </li>
           <li className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-blue-600" />
-            <span>Radimo svakog dana 08–18</span>
+            <span>Pon–Sub 08–17 · Nedeljom ne radimo</span>
           </li>
         </ul>
       </div>
