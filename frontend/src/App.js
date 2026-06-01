@@ -43,7 +43,7 @@ const HERO_COLLAGE = [
   {
     src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/4aunoqt6_e3767dc9-0688-4e37-b4a7-7f9236ce957a.jpg",
     alt: "Udoban kutak za čekanje sa kafe aparatom",
-    caption: "Kutak za kafu",
+    caption: "Kutak za kafu i čekanje",
   },
 ];
 
@@ -259,9 +259,11 @@ const Hero = () => (
               className="w-full h-[320px] sm:h-[420px] md:h-[460px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
               loading={i === 0 ? "eager" : "lazy"}
             />
-            <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/70 via-black/15 to-transparent text-white">
-              <div className="font-display text-xl md:text-2xl font-semibold leading-tight drop-shadow">
-                {g.caption}
+            <div className="absolute left-4 bottom-4 right-4 flex">
+              <div className="inline-flex items-center rounded-full bg-white/95 backdrop-blur px-4 py-2 ring-1 ring-blue-100 shadow-[0_10px_30px_-10px_rgba(15,23,42,0.45)]">
+                <span className="font-display text-base md:text-lg font-bold tracking-tight text-blue-700">
+                  {g.caption}
+                </span>
               </div>
             </div>
           </a>
