@@ -18,6 +18,8 @@ import {
 
 const PHONE_DISPLAY = "063 567 119";
 const PHONE_TEL = "+38163567119";
+const PHONE2_DISPLAY = "021 634 1246";
+const PHONE2_TEL = "+381216341246";
 const ADDRESS = "Jovana Cvijića 54, 21000 Novi Sad";
 const MAPS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Bistar+Potok+Jovana+Cvij%C4%87a+54+Novi+Sad";
@@ -761,6 +763,12 @@ const Footer = () => (
             <Phone className="w-4 h-4 text-blue-600" />
             <a href={`tel:${PHONE_TEL}`} className="hover:text-blue-700">
               {PHONE_DISPLAY}
+            </a>
+          </li>
+          <li className="flex items-center gap-2">
+            <Phone className="w-4 h-4 text-blue-600" />
+            <a href={`tel:${PHONE2_TEL}`} className="hover:text-blue-700">
+              {PHONE2_DISPLAY}
             </a>
           </li>
           <li className="flex items-start gap-2">
