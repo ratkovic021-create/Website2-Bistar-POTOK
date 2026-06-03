@@ -36,9 +36,9 @@ const HERO_COLLAGE = [
     caption: "Naša perionica",
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/09i6gzql_9701449b-2717-4ce5-926c-875737f92318.jpg",
-    alt: "Žuti zid sa stripom uz perionicu",
-    caption: "Strip mural",
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/3kf0vygp_image.png",
+    alt: "Aуtoperionica Bistar Potok — boksovi 1, 2 i 3 sa vozilima na pranju",
+    caption: "Tri boksa, brzi servis",
   },
   {
     src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/4aunoqt6_e3767dc9-0688-4e37-b4a7-7f9236ce957a.jpg",
