@@ -359,13 +359,22 @@ const About = () => (
       <div className="md:col-span-6">
         <div className="relative">
           <div className="absolute -inset-3 bg-blue-200/40 rounded-[1.75rem] blur-2xl" />
-          <img
-            src={ABOUT_IMG}
-            alt="Sjajan Mercedes nakon pranja u Bistar Potoku — rezultat govori sam za sebe"
-            className="relative rounded-[1.5rem] w-full h-[440px] object-cover ring-1 ring-blue-100"
-            loading="lazy"
-            data-testid="about-image"
-          />
+          <div className="relative grid grid-cols-2 gap-3">
+            <img
+              src="/porsche-mural.webp"
+              alt="Crveni Porsche ispred perionice Bistar Potok sa stripom na zidu"
+              className="rounded-[1.25rem] w-full h-[440px] object-cover ring-1 ring-blue-100"
+              loading="lazy"
+              data-testid="about-image"
+            />
+            <img
+              src="/comic-mural.jpg"
+              alt="Žuti zid sa stripom — prepoznatljiv znak perionice Bistar Potok"
+              className="rounded-[1.25rem] w-full h-[440px] object-cover ring-1 ring-blue-100"
+              loading="lazy"
+              data-testid="about-image-2"
+            />
+          </div>
         </div>
       </div>
       <div className="md:col-span-6">
