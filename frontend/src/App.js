@@ -691,46 +691,6 @@ const Location = () => (
   </section>
 );
 
-const CtaBanner = () => (
-  <section className="relative py-16 md:py-20">
-    <div className="max-w-7xl mx-auto px-5 md:px-8">
-      <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-700 via-blue-600 to-sky-500 p-8 md:p-14 text-white">
-        <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-white/10 blur-2xl" />
-        <div className="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-sky-300/30 blur-2xl" />
-        <div className="relative grid md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-7">
-            <h3 className="font-display text-3xl md:text-5xl font-semibold tracking-tight leading-[1.05]">
-              Spremni da Vaš auto ponovo zasija?
-            </h3>
-            <p className="mt-4 text-white/85 text-[17px] max-w-xl">
-              Pozovite nas — javljamo se odmah i dogovaramo termin koji Vama
-              odgovara.
-            </p>
-          </div>
-          <div className="md:col-span-5 flex flex-wrap gap-3 md:justify-end">
-            <a
-              href={`tel:${PHONE_TEL}`}
-              data-testid="cta-banner-call"
-              className="pulse-ring inline-flex items-center gap-3 rounded-full bg-white text-blue-700 font-semibold px-7 py-5 text-lg shadow-[0_20px_50px_-20px_rgba(0,0,0,0.4)] hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-              {PHONE_DISPLAY}
-            </a>
-            <a
-              href={`tel:${PHONE2_TEL}`}
-              data-testid="cta-banner-call-2"
-              className="inline-flex items-center gap-3 rounded-full bg-white text-blue-700 font-semibold px-7 py-5 text-lg shadow-[0_20px_50px_-20px_rgba(0,0,0,0.4)] hover:bg-blue-50 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-              {PHONE2_DISPLAY}
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
 const FinalBanner = () => (
   <section
     className="relative w-full overflow-hidden"
@@ -910,7 +870,6 @@ const Home = () => (
       <Services />
       <About />
       <Location />
-      <CtaBanner />
     </main>
     <FinalBanner />
     <Footer />
