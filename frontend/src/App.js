@@ -22,9 +22,9 @@ const PHONE2_DISPLAY = "021 634 1246";
 const PHONE2_TEL = "+381216341246";
 const ADDRESS = "Jovana Cvijića 54, 21000 Novi Sad";
 const MAPS_URL =
-  "https://www.google.com/maps/dir/?api=1&destination=Bistar+Potok+Jovana+Cvij%C4%87a+54+Novi+Sad";
+  "https://www.google.com/maps/dir/?api=1&destination=Bistar+Potok+Jovana+Cvijica+54+Novi+Sad";
 const MAPS_EMBED =
-  "https://www.google.com/maps?q=Bistar%20Potok%20Jovana%20Cvij%C4%87a%2054%2C%20Novi%20Sad&output=embed";
+  "https://www.google.com/maps?q=Bistar+Potok+Jovana+Cvijica+54+Novi+Sad&output=embed";
 
 const HERO_IMG =
   "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/9xdq9fx0_1c300a0c-1d31-48d8-b19d-a4813791ffe4.jpg";
