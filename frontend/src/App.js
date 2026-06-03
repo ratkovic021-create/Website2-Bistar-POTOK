@@ -686,7 +686,7 @@ const FinalBanner = () => (
     <img
       src="https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/gwwmyggy_IMG_0255.jpeg"
       alt="Aуtoperionica Bistar Potok uveče — gost je uvek u pravu"
-      className="w-full h-[420px] md:h-[640px] object-cover"
+      className="w-full h-[420px] md:h-[640px] object-cover object-[center_28%]"
       loading="lazy"
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20" />
