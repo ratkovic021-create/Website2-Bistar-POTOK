@@ -356,36 +356,36 @@ const Services = () => (
 const About = () => (
   <section className="relative py-20 md:py-24 bg-slate-50/60 border-y border-slate-100">
     <div className="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-12 gap-12 items-center">
-      <div className="md:col-span-6">
+      <div className="md:col-span-7">
         <div className="relative">
           <div className="absolute -inset-3 bg-blue-200/40 rounded-[1.75rem] blur-2xl" />
           <div className="relative grid grid-cols-2 gap-3">
             <img
-              src="/porsche-mural.webp"
-              alt="Crveni Porsche ispred perionice Bistar Potok sa stripom na zidu"
-              className="rounded-[1.25rem] w-full h-[440px] object-cover ring-1 ring-blue-100"
+              src="/comic-mural.jpg"
+              alt="Žuti zid sa stripom — prepoznatljiv znak perionice Bistar Potok"
+              className="rounded-[1.25rem] w-full h-[520px] object-cover ring-1 ring-blue-100"
               loading="lazy"
               data-testid="about-image"
             />
             <img
-              src="/comic-mural.jpg"
-              alt="Žuti zid sa stripom — prepoznatljiv znak perionice Bistar Potok"
-              className="rounded-[1.25rem] w-full h-[440px] object-cover ring-1 ring-blue-100"
+              src="/porsche-mural.webp"
+              alt="Crveni Porsche ispred perionice Bistar Potok sa stripom na zidu"
+              className="rounded-[1.25rem] w-full h-[520px] object-cover ring-1 ring-blue-100"
               loading="lazy"
               data-testid="about-image-2"
             />
           </div>
         </div>
       </div>
-      <div className="md:col-span-6">
+      <div className="md:col-span-5">
         <div className="text-xs uppercase tracking-[0.2em] text-blue-700 font-semibold">
           O nama
         </div>
-        <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mt-3">
+        <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mt-3">
           Mala perionica, <em className="not-italic text-blue-700">veliki</em>{" "}
           rezultati.
         </h2>
-        <p className="mt-5 text-[17px] text-slate-600 leading-relaxed">
+        <p className="mt-4 text-[15px] text-slate-600 leading-relaxed">
           Bistar Potok je tu da Vaš automobil zasija — od svakodnevnog pranja
           do detaljnog poliranja i nege enterijera. Posao radimo pažljivo i
           posvećeno, baš onako kako bismo to uradili za svoj automobil.
