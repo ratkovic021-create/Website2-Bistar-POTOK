@@ -678,6 +678,57 @@ const CtaBanner = () => (
   </section>
 );
 
+const FinalBanner = () => (
+  <section
+    className="relative w-full overflow-hidden"
+    data-testid="final-banner"
+  >
+    <img
+      src="https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/gwwmyggy_IMG_0255.jpeg"
+      alt="Aуtoperionica Bistar Potok uveče — gost je uvek u pravu"
+      className="w-full h-[420px] md:h-[640px] object-cover"
+      loading="lazy"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20" />
+    <div className="absolute inset-0 flex items-end">
+      <div className="max-w-7xl mx-auto px-5 md:px-8 pb-12 md:pb-20 w-full">
+        <div className="max-w-3xl text-white">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white ring-1 ring-white/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-300" />
+            Gost je uvek u pravu
+          </div>
+          <h2 className="mt-5 font-display text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+            Vidimo se u <span className="text-blue-300">Bistar Potoku</span>.
+          </h2>
+          <p className="mt-4 text-white/80 text-lg max-w-xl">
+            {ADDRESS} · Otvoreno svakog dana 08–17 (nedeljom ne radimo).
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a
+              href={`tel:${PHONE_TEL}`}
+              data-testid="final-banner-call"
+              className="inline-flex items-center gap-2 rounded-full bg-white text-blue-700 hover:bg-blue-50 font-semibold px-5 py-3 transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              {PHONE_DISPLAY}
+            </a>
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="final-banner-directions"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 hover:bg-white/10 text-white font-semibold px-5 py-[10px] transition-colors"
+            >
+              <Navigation className="w-4 h-4" />
+              Uputstvo do nas
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const Footer = () => (
   <footer className="border-t border-slate-100 bg-white">
     <div className="max-w-7xl mx-auto px-5 md:px-8 py-12 grid md:grid-cols-12 gap-8">
@@ -779,6 +830,7 @@ const Home = () => (
       <Location />
       <CtaBanner />
     </main>
+    <FinalBanner />
     <Footer />
     <MobileCallBar />
   </div>
