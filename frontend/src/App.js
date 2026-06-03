@@ -25,14 +25,14 @@ const MAPS_EMBED =
   "https://www.google.com/maps?q=Bistar%20Potok%20Jovana%20Cvij%C4%87a%2054%2C%20Novi%20Sad&output=embed";
 
 const HERO_IMG =
-  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/gz8kt03n_6fe1f7cf-f201-4e39-a339-5816cfaba273.jpg";
+  "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/9xdq9fx0_1c300a0c-1d31-48d8-b19d-a4813791ffe4.jpg";
 const ABOUT_IMG =
   "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/y3lesyey_b4fdc49b-ea83-4bb5-addc-c4a54aa1ecf4.jpg";
 
 const HERO_COLLAGE = [
   {
-    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/gz8kt03n_6fe1f7cf-f201-4e39-a339-5816cfaba273.jpg",
-    alt: "Aуtoperionica Bistar Potok — pogled na ulaz",
+    src: "https://customer-assets.emergentagent.com/job_vehicle-detailing-5/artifacts/9xdq9fx0_1c300a0c-1d31-48d8-b19d-a4813791ffe4.jpg",
+    alt: "Aуtoperionica Bistar Potok — pogled na ulaz pod plavim nebom",
     caption: "Naša perionica",
   },
   {
