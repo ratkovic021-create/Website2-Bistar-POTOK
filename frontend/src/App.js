@@ -160,15 +160,25 @@ const Nav = () => (
         </a>
       </nav>
 
-      <a
-        href={`tel:${PHONE_TEL}`}
-        data-testid="nav-call-button"
-        className="inline-flex items-center gap-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 transition-colors"
-      >
-        <Phone className="w-4 h-4" />
-        <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
-        <span className="sm:hidden">Pozovi</span>
-      </a>
+      <div className="flex items-center gap-2">
+        <a
+          href={`tel:${PHONE_TEL}`}
+          data-testid="nav-call-button"
+          className="inline-flex items-center gap-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 transition-colors"
+        >
+          <Phone className="w-4 h-4" />
+          <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
+          <span className="sm:hidden">Pozovi</span>
+        </a>
+        <a
+          href={`tel:${PHONE2_TEL}`}
+          data-testid="nav-call-button-2"
+          className="hidden sm:inline-flex items-center gap-2 rounded-full border-2 border-blue-200 hover:border-blue-600 text-blue-700 text-sm font-semibold px-4 py-2.5 transition-colors"
+        >
+          <Phone className="w-4 h-4" />
+          {PHONE2_DISPLAY}
+        </a>
+      </div>
     </div>
   </header>
 );
@@ -210,6 +220,14 @@ const Hero = () => (
         >
           <Phone className="w-5 h-5" />
           Pozovi {PHONE_DISPLAY}
+        </a>
+        <a
+          href={`tel:${PHONE2_TEL}`}
+          data-testid="hero-call-button-2"
+          className="inline-flex items-center gap-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-4 text-base shadow-[0_18px_40px_-18px_rgba(37,99,235,0.8)] transition-colors"
+        >
+          <Phone className="w-5 h-5" />
+          Pozovi {PHONE2_DISPLAY}
         </a>
         <a
           href={MAPS_URL}
@@ -313,6 +331,14 @@ const Services = () => (
           Pozovi {PHONE_DISPLAY}
         </a>
         <a
+          href={`tel:${PHONE2_TEL}`}
+          data-testid="services-call-button-2"
+          className="inline-flex items-center gap-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-4 text-base shadow-[0_18px_40px_-18px_rgba(37,99,235,0.8)] transition-colors"
+        >
+          <Phone className="w-5 h-5" />
+          Pozovi {PHONE2_DISPLAY}
+        </a>
+        <a
           href={MAPS_URL}
           target="_blank"
           rel="noopener noreferrer"
@@ -383,6 +409,14 @@ const About = () => (
           >
             <Phone className="w-4 h-4" />
             Pozovi {PHONE_DISPLAY}
+          </a>
+          <a
+            href={`tel:${PHONE2_TEL}`}
+            data-testid="about-call-button-2"
+            className="inline-flex items-center gap-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            Pozovi {PHONE2_DISPLAY}
           </a>
           <a
             href={MAPS_URL}
@@ -664,7 +698,7 @@ const CtaBanner = () => (
               odgovara.
             </p>
           </div>
-          <div className="md:col-span-5 flex md:justify-end">
+          <div className="md:col-span-5 flex flex-wrap gap-3 md:justify-end">
             <a
               href={`tel:${PHONE_TEL}`}
               data-testid="cta-banner-call"
@@ -672,6 +706,14 @@ const CtaBanner = () => (
             >
               <Phone className="w-5 h-5" />
               {PHONE_DISPLAY}
+            </a>
+            <a
+              href={`tel:${PHONE2_TEL}`}
+              data-testid="cta-banner-call-2"
+              className="inline-flex items-center gap-3 rounded-full bg-white text-blue-700 font-semibold px-7 py-5 text-lg shadow-[0_20px_50px_-20px_rgba(0,0,0,0.4)] hover:bg-blue-50 transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              {PHONE2_DISPLAY}
             </a>
           </div>
         </div>
@@ -713,6 +755,14 @@ const FinalBanner = () => (
             >
               <Phone className="w-4 h-4" />
               {PHONE_DISPLAY}
+            </a>
+            <a
+              href={`tel:${PHONE2_TEL}`}
+              data-testid="final-banner-call-2"
+              className="inline-flex items-center gap-2 rounded-full bg-white text-blue-700 hover:bg-blue-50 font-semibold px-5 py-3 transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              {PHONE2_DISPLAY}
             </a>
             <a
               href={MAPS_URL}
@@ -792,7 +842,14 @@ const Footer = () => (
             data-testid="footer-call"
             className="inline-flex items-center gap-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 transition-colors"
           >
-            <Phone className="w-4 h-4" /> Pozovi
+            <Phone className="w-4 h-4" /> {PHONE_DISPLAY}
+          </a>
+          <a
+            href={`tel:${PHONE2_TEL}`}
+            data-testid="footer-call-2"
+            className="inline-flex items-center gap-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 transition-colors"
+          >
+            <Phone className="w-4 h-4" /> {PHONE2_DISPLAY}
           </a>
           <a
             href={MAPS_URL}
@@ -816,14 +873,22 @@ const Footer = () => (
 );
 
 const MobileCallBar = () => (
-  <div className="md:hidden fixed bottom-0 inset-x-0 z-40 p-3 bg-white/95 backdrop-blur border-t border-slate-200">
+  <div className="md:hidden fixed bottom-0 inset-x-0 z-40 p-3 bg-white/95 backdrop-blur border-t border-slate-200 flex gap-2">
     <a
       href={`tel:${PHONE_TEL}`}
       data-testid="mobile-call-bar"
-      className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 text-white font-semibold py-3.5"
+      className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 text-white font-semibold py-3.5 text-sm"
     >
       <Phone className="w-5 h-5" />
-      Pozovi {PHONE_DISPLAY}
+      {PHONE_DISPLAY}
+    </a>
+    <a
+      href={`tel:${PHONE2_TEL}`}
+      data-testid="mobile-call-bar-2"
+      className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 text-white font-semibold py-3.5 text-sm"
+    >
+      <Phone className="w-5 h-5" />
+      {PHONE2_DISPLAY}
     </a>
   </div>
 );
